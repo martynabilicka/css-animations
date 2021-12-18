@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        span {
+            position: absolute;
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            text-align: center;
+            top: 10%;
+            left: 10%;
+            padding: 15px 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+
+        .walls {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: brown;
+            bottom: 0;
+            left: 0;
+            transition: .5s;
+        }
+
+        .window1 {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: rgb(127, 214, 255);
+            bottom: 0;
+            left: 0;
+            transition: all .5s .1s;
+            /* z-index: 1; */
+        }
+
+        .window2 {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: rgb(127, 214, 255);
+            bottom: 0;
+            left: 0;
+            transition: all .5s .2s;
+        }
+
+        .door {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: rgb(100, 40, 0);
+            bottom: 0;
+            left: 0;
+            transition: all .5s .3s;
+        }
+
+        .roof {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: rgb(22, 9, 0);
+            bottom: 0;
+            left: 0;
+            transition: all .5s .4s;
+        }
+
+        .chimney {
+            position: absolute;
+            height: 0;
+            width: 0;
+            background-color: rgb(0, 0, 0);
+            bottom: 0;
+            left: 0;
+            transition: all .5s .5s;
+        }
+
+        span:hover ~ div.walls {
+            bottom: 200px;
+            left: 700px;
+            width: 400px;
+            height: 400px;
+        }
+
+        span:hover ~ div.window1 {
+            bottom: 420px;
+            left: 750px;
+            width: 100px;
+            height: 100px;
+        }
+
+        span:hover ~ div.window2 {
+            bottom: 420px;
+            left: 950px;
+            width: 100px;
+            height: 100px;
+        }
+
+        span:hover ~ div.door {
+            bottom: 200px;
+            left: 850px;
+            width: 100px;
+            height: 150px;
+        }
+
+        span:hover ~ div.roof {
+            bottom: 450px;
+            left: 758px;
+            width: 284px;
+            height: 284px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        span:hover ~ div.chimney {
+            bottom: 620px;
+            left: 1000px;
+            width: 50px;
+            height: 100px;
+            z-index: -2;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div class="walls"></div>
+    <div class="window1"></div>
+    <div class="window2"></div>
+    <div class="door"></div>
+    <div class="roof"></div>
+    <div class="chimney"></div>
+</body>
+
+</html>
